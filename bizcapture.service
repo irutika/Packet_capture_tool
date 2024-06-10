@@ -1,0 +1,12 @@
+[Unit]
+Description=Bizcapture Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/bizrtc/bizcapturetool
+ExecStart=/usr/bin/python3 /bizrtc/bizcapturetool/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

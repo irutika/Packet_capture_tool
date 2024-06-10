@@ -1,0 +1,162 @@
+.header {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   position: fixed;
+   text-align: center;
+   left: 0;
+   top:0;
+   bottom: 0;
+   height:6%;
+   width: 100%;
+   background-color: #00ace6;
+   color: white;
+   text-align: center;
+   padding-bottom: 15px;
+ 
+   
+   
+}
+
+.footer {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   position: fixed;
+   text-align=center;
+   left: 0;
+   bottom: 0;
+   height:6%;
+   width: 100%;
+   background-color: #00ace6;
+   color: white;
+   text-align: center;
+   padding-bottom: 15px
+   
+}
+
+#time {
+  
+  position: absolute;
+  
+  top: 8px; 
+  right: 4px;  /* Adjust as needed for spacing */
+  /* Set font styles as desired */
+  font-size: 14px;
+  color: #fff; /* Example white color */
+}
+
+#version {
+  position: absolute;
+  top: 1px;
+  right: 10px; /* Add right property for positioning */
+}
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 50%;
+  margin: 50px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+
+
+#interfaceDropdown {
+  width: 120px; 
+  height: 30px; 
+  padding: 2px; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button-container,
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container label {
+  font-weight: bold;
+  padding-bottom: 0px;
+}
+
+.button-group {
+  display: flex;
+  gap: 200px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#stopBtn,
+#downloadBtn {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.filter-container div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px; 
+  padding-bottom: 5px; 
+
+}
+
+#allFilterContainer {
+	padding-bottom: 10px;
+}
+
+
+#selectFilter {
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.checkbox-label {
+  justify-self: start; 
+}
+
+#customFilter {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 27px; 
+  width: 620px; 
+}
+
+
+
+
+#captureStatus {
+  font-weight: bold; 
+  font-style: italic;
+  margin-top: 20px;
+}
+
+
+

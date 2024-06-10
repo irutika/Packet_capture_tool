@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packet Capture Tool</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<br> <br>
+  <div id="container">
+    <header class="header">
+      <p> <h3>Packet Capture Tool </h3></p>
+	  <p id="time"> {{ date_time }} </p>
+	  </header>
+    <main>
+      <div class="button-container">
+        <label for="interfaceDropdown">Select Network Interface:</label>
+            <select id="interfaceDropdown">
+			<option value="any">Any</option>
+            {% for interface in interfaces %}
+            <option value="{{ interface }}">{{ interface }}</option>
+            {% endfor %}	
+            </select>
+		    <div class ="button-group">
+            <button id="startBtn">Start Capture</button>
+            <button id="stopBtn" >Stop Capture</button>
+            <button id="downloadBtn" >Download Capture</button>
+	        </div>
+       </div>
+       <div class="filter-container">
+	        <form method="GET" action="/bizcapture">
+                <div id="selectFilter">
+                <label>Select filter:</label>
+				</div>
+	            <div id="allFilterContainer">
+                <input type="radio" id="allFilter" name="filterType">
+                <label for="allFilter">All</label>
+                </div> 
+            <div>
+                <div>
+                <input type="radio" id="protocolRadio" name="filterType">
+                <label for="protocolRadio">Protocols:</label>
+                </div>
+                <div id="protocolOptions">
+                <label class="checkbox-label" for="tcpCheckbox">
+                <input type="checkbox" id="tcpCheckbox" name="protocol" value="tcp"> TCP
+                </label>
+                <label class="checkbox-label" for="udpCheckbox">
+                <input type="checkbox" id="udpCheckbox" name="protocol" value="udp"> UDP
+                </label>
+                </div>
+            </div>
+            <div>
+                <input type="radio" id="customRadio" name="filterType">
+                <label for="customRadio">Custom:</label>
+            </div>
+                <input type="text" id="customFilter" name="customFilter" placeholder="(e.g tcp and host 1.2.3.4 and port 5066)">
+
+            </form>
+        </div>
+    </main>
+  </div>
+   <footer class="footer">
+    <p>Copyright © 2024 bizRTC, All rights reserved.</p>
+	<p id="version">Version: v0.0.1_10 </p>
+  </footer>
+  <div id="captureStatus" style="text-align: center;"></div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

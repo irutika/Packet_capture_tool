@@ -1,0 +1,8 @@
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip3 install --user` instead.
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip3 install --user` instead.
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip3 install --user` instead.
+awk: cmd. line:1: /^port/ {print $2}config.ini
+awk: cmd. line:1:                         ^ syntax error
+sed: can't read /etc/sysconfig/iptables: No such file or directory
+./firewallConfig.sh: line 6: /user/bin/service: No such file or directory
+Error: INVALID_PORT
